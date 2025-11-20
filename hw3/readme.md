@@ -27,6 +27,10 @@ Recommended Ray version:
 pip install "ray[default]==2.9.3"
 ```
 
+Dataset
+
+Put test_data.npy and train_data.npy in the same folder as the script.
+
 ---
 
 ## 2. Running the Code

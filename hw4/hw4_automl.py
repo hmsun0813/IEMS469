@@ -35,6 +35,11 @@ GA_CROSSOVER_PROB = 0.9
 GA_MUTATION_PROB = 0.2
 GA_MAX_AGE = 5  # for age-based selection
 
+# BO hyperparameters
+BO_INIT_POINTS = 5
+BO_ITER = 15
+
+
 # -----------------------------
 # Utility: Seed
 # -----------------------------
@@ -497,7 +502,7 @@ def run_bayesian_optimization(
         verbose=2
     )
 
-    optimizer.maximize(init_points=5, n_iter=15)
+    optimizer.maximize(init_points=BO_INIT_POINTS, n_iter=BO_ITER)
 
     best = optimizer.max 
     best_batch_idx = int(round(best["params"]["batch_idx_cont"]))
